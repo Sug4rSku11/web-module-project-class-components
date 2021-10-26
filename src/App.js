@@ -1,5 +1,4 @@
 import React from 'react';
-import ReactDOM from 'react-dom'
 import ListForm from './components/TodoForm';
 import TodoList from './components/TodoList';
 
@@ -55,7 +54,7 @@ handleToggleItem = (item) => {
     if (todo.id === item.id) {
       return {
         ...todo,
-        completed: !todo.completed
+        completed: !todo.completed //? false: true
       }
     }
     return todo;
@@ -68,10 +67,11 @@ handleToggleItem = (item) => {
       <>
       <div>
         <h2>Welcome to your Todo App!</h2>
-        <ListForm handleAddItem={this.handleAddItem}/>
+        
       </div>
       <TodoList handleToggleItem={this.handleToggleIem} 
       todo={this.state.todo}/>
+      <ListForm handleAddItem={this.handleAddItem}/>
       <button onClick={this.handleClear}
       className="clear-btn">Clear Completed</button>
       </>
