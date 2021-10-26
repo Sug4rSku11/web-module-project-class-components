@@ -33,7 +33,7 @@ class App extends React.Component {
   handleClear = () => {
     this.setState({
       ...this.state,
-      todo: this.state.todo.filter(item => !item.todo)
+      todo: this.state.todo.filter(item => !item.completed)
     });
   }
   //Add Item
@@ -65,6 +65,7 @@ handleToggleItem = (item) => {
 
   render() {
     return (
+      <>
       <div>
         <h2>Welcome to your Todo App!</h2>
         <ListForm handleAddItem={this.handleAddItem}/>
@@ -73,6 +74,7 @@ handleToggleItem = (item) => {
       todo={this.state.todo}/>
       <button onClick={this.handleClear}
       className="clear-btn">Clear Completed</button>
+      </>
     );
   }
   }
