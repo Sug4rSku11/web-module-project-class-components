@@ -1,5 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom'
+import ListForm from './components/TodoForm';
+import TodoList from './components/TodoList';
+
 import '../src/components/Todo.css';
 
 
@@ -64,7 +67,12 @@ handleToggleItem = (item) => {
     return (
       <div>
         <h2>Welcome to your Todo App!</h2>
+        <ListForm handleAddItem={this.handleAddItem}/>
       </div>
+      <TodoList handleToggleItem={this.handleToggleIem} 
+      todo={this.state.todo}/>
+      <button onClick={this.handleClear}
+      className="clear-btn">Clear Completed</button>
     );
   }
   }
