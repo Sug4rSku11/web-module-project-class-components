@@ -32,7 +32,7 @@ class App extends React.Component {
   handleClear = () => {
     this.setState({
       ...this.state,
-      todo: this.state.todo.filter(item => !item.completed)
+      todo: this.state.todo.filter(item => !item.completed === false)
     });
   }
   //Add Item
@@ -47,14 +47,14 @@ class App extends React.Component {
       todo: [...this.state.todo, newItem]
   });
 }
-handleToggleItem = (item) => {
+handleToggleItem = (id) => {
   this.setState({
   ...this.state,
   todo: this.state.todo.map(todo => {
-    if (todo.id === item.id) {
+    if (todo.id === id) {
       return {
         ...todo,
-        completed: !todo.completed //? false: true
+        completed: !todo.completed 
       }
     }
     return todo;
@@ -69,8 +69,9 @@ handleToggleItem = (item) => {
         <h2>Welcome to your Todo App!</h2>
         
       </div>
-      <TodoList handleToggleItem={this.handleToggleIem} 
-      todo={this.state.todo}/>
+      <TodoList handleToggleItem={this.handleToggleItem} 
+                todo={this.state.todo}
+                handleClear={this.handleClear}/>
       <ListForm handleAddItem={this.handleAddItem}/>
       <button onClick={this.handleClear}
       className="clear-btn">Clear Completed</button>
