@@ -34,7 +34,7 @@ class ListForm extends React.Component {
     // }
     render() {
         return (
-            <form onSubmit={this.handleSubmit}> Add Task:
+            <form onSubmit={this.handleSubmit} className="add-form"> Add Task:
                 <input onChange={this.handleChanges} 
                 type="text" 
                 name="item" 
