@@ -32,7 +32,7 @@ class App extends React.Component {
   handleClear = () => {
     this.setState({
       ...this.state,
-      todo: this.state.todo.filter(item => !item.completed === false)
+      todo: this.state.todo.filter(item => !item.completed === true)
     });
   }
   //Add Item

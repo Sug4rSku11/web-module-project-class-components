@@ -1,5 +1,5 @@
 body {
-    background-image: url(https://images.unsplash.com/photo-1518826778770-a729fb53327c?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=687&q=80);
+    background-image: url(https://images.unsplash.com/photo-1586075010923-2dd4570fb338?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=687&q=80);
     background-size: cover;
     background-repeat: no-repeat;
      color:  black;
@@ -15,29 +15,36 @@ body {
     width: 50%;
     margin: 5% 25%;
 }
-.app {
-    background-color: whitesmoke;
+
+.item.completed {
+   
+    text-decoration: line-through;
+    color: black;
+   
 }
 .item {
-   
-   
-    color: black;
-    border: solid blue 1px;
-}
-.completed {
-    text-decoration: line-through;
-    border: solid orange 1px;
+    background-color: skyblue;
+    border-style: outset;
+    text-align: center;
+    /* border: dotted gray 1px; */
+    
 }
 .todo-list {
     width: 50%;
-    border: solid red 1px;
+   text-align: center;
+   border-style: inset;
+   background-color: pink;
+   
    
 }
 .add-form {
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-top: 3%;
 }
 .clear-btn {
-    background-color: #b51734;
+    background-color: #dfdede;
+    margin: 4% 4%;
+    padding: 1%;
 }
