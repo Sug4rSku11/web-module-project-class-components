@@ -65,8 +65,8 @@ handleToggleItem = (id) => {
   render() {
     return (
       <>
-      <div>
-        <h2>Welcome to your Todo App!</h2>
+      <div className="app">
+        <h2> To-do App!</h2>
         
       </div>
       <TodoList handleToggleItem={this.handleToggleItem} 
